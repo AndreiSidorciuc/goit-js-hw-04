@@ -30,13 +30,16 @@
 
 function calcAverageCalories(days) {
   if (days.length === 0) {
-    return 0; // якщо масив порожній, повертаємо 0
+    return 0;
   }
 
-  // сумуємо калорії всіх днів
-  const totalCalories = days.reduce((sum, day) => sum + day.calories, 0);
+  let totalCalories = 0;
 
-  // ділимо суму на кількість днів і повертаємо середнє
+  // Підсумовуємо калорії за допомогою циклу
+  for (const day of days) {
+    totalCalories += day.calories;
+  }
+
   return totalCalories / days.length;
 }
 
