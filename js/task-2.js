@@ -28,35 +28,17 @@
 //   calcAverageCalories([])
 // ); // 0
 
-// function calcAverageCalories(days) {
-//   if (days.length === 0) {
-//     return 0;
-//   }
-
-//   let totalCalories = 0;
-
-//   // Підсумовуємо калорії за допомогою циклу
-//   for (const day of days) {
-//     totalCalories += day.calories;
-//   }
-
-//   return totalCalories / days.length;
-// }
-
 function calcAverageCalories(days) {
-  // Якщо масив порожній, повертаємо 0
   if (days.length === 0) {
     return 0;
   }
 
   let totalCalories = 0;
 
-  // Проходимо циклом for та сумуємо калорії
   for (let i = 0; i < days.length; i++) {
     totalCalories += days[i].calories;
   }
 
-  // Обчислюємо середнє
   return totalCalories / days.length;
 }
 
